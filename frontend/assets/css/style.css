@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 10px;
+  }
+  
+  .banner {
+    background: url('../img/banner.jpg') no-repeat center;
+    background-size: cover;
+    padding: 50px;
+    text-align: center;
+    color: white;
+  }
+  
+  .produto {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    nav a {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  

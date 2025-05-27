@@ -1,26 +1,44 @@
-<!-- frontend/index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arte Madeira do China</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header>
     <h1>Arte Madeira do China</h1>
     <nav>
+      <a href="index.html">Início</a>
       <a href="produtos.html">Produtos</a>
-      <a href="corte.html">Serviço de Corte</a>
       <a href="contato.html">Contato</a>
+      <button onclick="trocarIdioma()">🇧🇷 / 🇨🇳</button>
     </nav>
   </header>
 
   <main>
-    <section class="apresentacao">
-      <h2>Soluções em MDF sob medida</h2>
-      <p>Venda de chapas inteiras ou cortadas sob medida. Móveis planejados e atendimento bilíngue!</p>
+    <section class="banner">
+      <h2>Bem-vindo à Arte Madeira do China</h2>
+      <p>Especialistas em MDF e móveis planejados.</p>
+    </section>
+
+    <section class="destaques">
+      <h3>Destaques</h3>
+      <div id="produtos-destaque"></div>
     </section>
   </main>
+
+  <footer>
+    <p>Contato: artemadeiradong@gmail.com | Instagram: em breve</p>
+  </footer>
+
+  <script src="/frontend/assets/js/api.js"></script>
+  <script src="/frontend/assets/js/main.js"></script>
+  <script src="/frontend/assets/js/i18n.js"></script>
+
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
 </body>
 </html>
