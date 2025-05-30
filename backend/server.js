@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 
 const rotaProduto = require('./routes/rotaProduto');
@@ -31,3 +32,5 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
   .catch((err) => {
     console.error('❌ Erro ao conectar no MongoDB:', err);
   });
+
+app.use(express.static(path.join(__dirname, '../frontend')));
