@@ -138,63 +138,170 @@ body {
   
 
   .produtos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
   }
   
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-  
-  .card h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.25rem;
+  .card-produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     text-align: center;
   }
   
-  .card p {
-    margin: 0.25rem 0;
-    font-size: 1rem;
-    text-align: center;
-    color: #555;
+  .card-produto img {
+    max-width: 100%;
+    border-radius: 8px;
   }
   
+  .card-produto h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .card-produto p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .card-produto .preco {
+    display: block;
+    font-weight: bold;
+    color: #007000;
+    margin-top: 0.5rem;
+  }
+  
+  .card-produto .tipo {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  /* Responsivo */
   @media (max-width: 600px) {
     .produtos-container {
-      padding: 0.5rem;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .card {
-      padding: 0.75rem;
+  
+    .card-produto {
+      width: 90%;
     }
-    
-    .card h3 {
-      font-size: 1.1rem;
-    }
-    
-    .card p {
-      font-size: 0.9rem;
+  }
+
+  
+  .destaques {
+    padding: 2rem;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .destaques h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Carrossel com botões */
+  .carrossel-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  .slide img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .legenda {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* Botões do carrossel */
+  .botao-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .botao-carrossel.prev {
+    left: 10px;
+  }
+  
+  .botao-carrossel.next {
+    right: 10px;
+  }
+  
+  /* Bloco sobre a empresa */
+  .sobre-empresa {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .sobre-empresa h4,
+  .sobre-empresa h5 {
+    color: #f2f2f2;
+    margin-top: 1rem;
+  }
+  
+  .sobre-empresa p,
+  .sobre-empresa li {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  .sobre-empresa ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sobre-empresa li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .sobre-empresa li i {
+    color: #00cba9;
+    margin-right: 8px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .slide img {
+      max-width: 90%;
+      height: auto;
     }
   }
   
