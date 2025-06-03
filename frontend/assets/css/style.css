@@ -304,4 +304,67 @@ body {
       height: auto;
     }
   }
+
+  .contato-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .formulario,
+  .apresentacao {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-contato input,
+  .form-contato textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .form-contato button {
+    padding: 1rem;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .form-contato button:hover {
+    background-color: #5c3210;
+  }
+  
+  .avatares {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .avatar {
+    text-align: center;
+  }
+  
+  .avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  }
+  
   
