@@ -1,6 +1,6 @@
 main {
-  background-color: #222; /* fundo escuro */
-  color: white; /* texto branco */
+  background-color: #222; 
+  color: white; 
   padding: 20px;
 }
 
@@ -20,19 +20,39 @@ body {
     align-items: center;
     gap: 1rem;
   }
-  
-  
-  /* header, footer {
+
+  header, footer {
     background: #333;
     color: white;
     padding: 1rem;
     text-align: center;
-  } */
+  }
   
   nav a {
     color: white;
     margin: 0 10px;
   }
+
+  .idioma-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.3rem;
+  }
+  
+  .bandeira {
+    width: 24px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+  
+  .bandeira:hover {
+    transform: scale(1.1);
+  }
+  
   
   .banner {
     background: url('../img/banner.jpg') no-repeat center;
@@ -41,12 +61,12 @@ body {
     text-align: center;
     color: white;
   }
-  
-  .produto {
+   
+   .produto {
     border: 1px solid #ccc;
     margin: 10px;
     padding: 10px;
-  }
+  } 
   
   @media (max-width: 600px) {
     nav a {
@@ -71,6 +91,7 @@ body {
   nav a {
     color: white;
     margin: 0 10px;
+    text-decoration:none;
   }
   
   .banner {
@@ -81,14 +102,14 @@ body {
     color: white;
   }
   
-  /* Ajuste para o main */
+
   main {
     background-color: #222;
     color: white;
     padding: 20px;
   }
   
-  /* Estilo da seção destaque */
+
   .destaque {
     margin-top: 30px;
   }
@@ -182,7 +203,7 @@ body {
     color: #777;
   }
   
-  /* Responsivo */
+
   @media (max-width: 600px) {
     .produtos-container {
       flex-direction: column;
@@ -206,8 +227,7 @@ body {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
-  
-  /* Carrossel com botões */
+
   .carrossel-wrapper {
     position: relative;
     max-width: 100%;
@@ -242,7 +262,7 @@ body {
     color: #ccc;
   }
   
-  /* Botões do carrossel */
+
   .botao-carrossel {
     position: absolute;
     top: 50%;
@@ -263,7 +283,7 @@ body {
     right: 10px;
   }
   
-  /* Bloco sobre a empresa */
+
   .sobre-empresa {
     max-width: 800px;
     margin: 0 auto;
@@ -297,7 +317,7 @@ body {
     margin-right: 8px;
   }
   
-  /* Responsivo */
+
   @media (max-width: 768px) {
     .slide img {
       max-width: 90%;
@@ -367,4 +387,4 @@ body {
     box-shadow: 0 0 8px rgba(0,0,0,0.15);
   }
   
-  
+   

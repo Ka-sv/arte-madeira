@@ -15,7 +15,11 @@
       <a href="index.html">Início</a>
       <a href="produtos.html">Produtos</a>
       <a href="contato.html">Contato</a>
-      <button onclick="trocarIdioma()"><img src="./assets/img/china.png" alt=""> / <img src="./assets/img/brasil.png" alt=""></button>
+      <button class="idioma-btn" onclick="trocarIdioma()">
+        <img src="./assets/img/brasil.png" alt="Bandeira do Brasil" class="bandeira">
+        <img src="./assets/img/china.png" alt="Bandeira da China" class="bandeira">
+      </button>
+      
     </nav>
   </header>
    
@@ -27,7 +31,7 @@
     </section>
 
     <section class="destaques">
-      <h3>Nossas Máquinas e Compromisso</h3>
+      <h3> Máquinas modernas e equipamentos de primeira qualidade.</h3>
     
       <div class="carrossel-wrapper">
         <button class="botao-carrossel prev" onclick="mudarSlide(-1)">❮</button>
