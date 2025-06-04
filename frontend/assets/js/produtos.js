@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     const resposta = await fetch('http://localhost:3000/api/produtos');
-    
     const produtos = await resposta.json();
 
-    produtos.forEach(produto => {
+    produtos.forEach((produto, index) => {
       const card = document.createElement('div');
       card.className = 'card-produto';
       card.innerHTML = `
@@ -15,7 +14,46 @@ document.addEventListener('DOMContentLoaded', async () => {
         <p>${produto.descricao}</p>
         <span class="preco">R$ ${produto.preco.toFixed(2)}</span>
         <span class="tipo">${produto.tipo === 'inteira' ? 'Chapa Inteira' : 'Cortado'}</span>
+
+        <div class="opcao-compra">
+          <label>
+            <input type="radio" name="tipo-chapa-${index}" value="inteira" checked> Inteira
+          </label>
+          <label>
+            <input type="radio" name="tipo-chapa-${index}" value="cortada"> Cortada
+          </label>
+          <input type="text" class="medidas" placeholder="Informe as medidas" style="display: none;">
+        </div>
+
+        <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
       `;
+
+      // Evento: mostra/esconde campo de medidas ao trocar opção
+      const radios = card.querySelectorAll(`input[name="tipo-chapa-${index}"]`);
+      const campoMedidas = card.querySelector('.medidas');
+      radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          campoMedidas.style.display = radio.value === 'cortada' ? 'block' : 'none';
+        });
+      });
+
+      // Evento: botão adicionar ao carrinho
+      const botao = card.querySelector('.btn-add-carrinho');
+      botao.addEventListener('click', () => {
+        const tipoSelecionado = card.querySelector(`input[name="tipo-chapa-${index}"]:checked`).value;
+        const medidas = campoMedidas.value.trim();
+
+        const itemCarrinho = {
+          nome: produto.nome,
+          preco: produto.preco,
+          tipo: tipoSelecionado,
+          medidas: tipoSelecionado === 'cortada' ? medidas : '',
+          quantidade: 1
+        };
+
+        adicionarAoCarrinho(itemCarrinho); // função que você implementará em carrinho.js
+      });
+
       container.appendChild(card);
     });
 

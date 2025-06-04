@@ -27,12 +27,28 @@
     <h2>Todos os Produtos</h2>
     <div id="produtos-container" class="produtos-container"></div>
   </main>
+      <!-- Ícone fixo do carrinho -->
+            <div class="carrinho-icon" onclick="abrirCarrinho()">
+              🛒 <span id="contador-carrinho">0</span>
+            </div>
+
+            <!-- Modal do carrinho -->
+            <div id="modal-carrinho" class="modal-carrinho">
+              <div class="modal-conteudo">
+                <span class="fechar" onclick="fecharCarrinho()">&times;</span>
+                <h2>Seu Carrinho</h2>
+                <div id="itens-carrinho"></div>
+                <p><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
+                <button onclick="finalizarCompra()">Finalizar Compra via WhatsApp</button>
+              </div>
+            </div>
 
   <footer>
     <p>© 2025 Arte Madeira do China</p>
   </footer>
 
   <script src="./assets/js/produtos.js" defer></script>
+  <script src="./assets/js/carrinho.js"></script>
 
 </body>
 
