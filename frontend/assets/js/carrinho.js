@@ -91,7 +91,7 @@ function finalizarCompra() {
   const total = carrinho.reduce((acc, p) => acc + p.preco * p.quantidade, 0);
   mensagem += `*Total: R$ ${total.toFixed(2)}*`;
 
-  const numero = '5599999999999'; // Altere para o número da empresa
+  const numero = '5511965779827'; // Altere para o número da empresa
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, '_blank');
 }
