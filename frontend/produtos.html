@@ -10,23 +10,38 @@
 <body>
   <header>
     <img src="./assets/img/logo.png" alt="Logo Arte Madeira do China" class="logo">
-    <h1>Arte Madeira do China</h1>
+    <h1 id="titulo-site">Arte Madeira do China</h1>
     <nav>
-      <a href="index.html">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="contato.html">Contato</a>
-      <button class="idioma-btn" onclick="trocarIdioma()">
-        <img src="./assets/img/brasil.png" alt="Bandeira do Brasil" class="bandeira">
-        <img src="./assets/img/china.png" alt="Bandeira da China" class="bandeira">
-      </button>
+      <a href="index.html" id="nav-inicio">Início</a>
+      <a href="produtos.html" id="nav-produtos">Produtos</a>
+      <a href="contato.html" id="nav-contato">Contato</a>
+
       
+      <select id="lang" onchange="trocarIdioma(this.value)">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="zh">🇨🇳 中文</option>
+      </select>
+       
     </nav>
   </header>
 
   <main>
-    <h2>Todos os Produtos</h2>
+    <h2 id="titulo-produtos">Todos os Produtos</h2>
     <div id="produtos-container" class="produtos-container"></div>
   </main>
+          <section id="catalogos">
+            <h2 id="titulo-catalogos">Catálogos de Fornecedores</h2>
+            <div class="catalogo-card">
+              <img src="./assets/img/catalogo-origens-nativas-2025.jpg" alt="Catálogo Eucatex 2024" class="catalogo-capa">
+              <div class="catalogo-info">
+                <h3 id="titulo-catalogo-eucatex">Coleção Origens MDF 2025 - Eucatex</h3>
+                <p id="descricao-catalogo">Veja as opções de padrões e acabamentos da nova linha Eucatex.</p>
+                <a href="https://www.eucatex.com.br/origens-nativas/img/Catalogo-Digital-Colecao-Origens-MDF-2024.pdf" target="_blank" class="btn-catalogo" id="btn-ver-catalogo">📖 Visualizar Catálogo</a>
+
+              
+            </div>
+          </section>
+  
       <!-- Ícone fixo do carrinho -->
             <div class="carrinho-icon" onclick="abrirCarrinho()">
               🛒 <span id="contador-carrinho">0</span>
@@ -36,19 +51,20 @@
             <div id="modal-carrinho" class="modal-carrinho">
               <div class="modal-conteudo">
                 <span class="fechar" onclick="fecharCarrinho()">&times;</span>
-                <h2>Seu Carrinho</h2>
+                <h2 id="titulo-carrinho">Seu Carrinho</h2>
                 <div id="itens-carrinho"></div>
                 <p><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
-                <button onclick="finalizarCompra()">Finalizar Compra via WhatsApp</button>
+                <button onclick="finalizarCompra()" id="botao-finalizar">Finalizar Compra via WhatsApp</button>
               </div>
-            </div>
 
   <footer>
-    <p>© 2025 Arte Madeira do China</p>
+    <p id="rodape-contato">Contato: artemadeiradong@gmail.com</p>
   </footer>
 
   <script src="./assets/js/produtos.js" defer></script>
   <script src="./assets/js/carrinho.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+
 
 </body>
 

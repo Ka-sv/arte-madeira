@@ -10,97 +10,91 @@
 <body>
   <header>
     <img src="./assets/img/logo.png" alt="Logo Arte Madeira do China" class="logo">
-    <h1>Arte Madeira do China</h1>
+    <h1 id="titulo-site">Arte Madeira do China</h1>
+
     <nav>
-      <a href="index.html">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="contato.html">Contato</a>
-      <button class="idioma-btn" onclick="trocarIdioma()">
-        <img src="./assets/img/brasil.png" alt="Bandeira do Brasil" class="bandeira">
-        <img src="./assets/img/china.png" alt="Bandeira da China" class="bandeira">
-      </button>
-      
+      <a href="index.html" id="nav-inicio">Início</a>
+      <a href="produtos.html" id="nav-produtos">Produtos</a>
+      <a href="contato.html" id="nav-contato">Contato</a>
+      <a href="servico.html" id="nav-servico">Serviços</a>
+
+      <select id="lang" onchange="trocarIdioma(this.value)">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="zh">🇨🇳 中文</option>
+      </select>
     </nav>
   </header>
-   
 
   <main>
     <section class="banner">
-      <h2>Bem-vindo à Arte Madeira do China</h2>
-      <p>Especialistas em MDF e móveis planejados.</p>
+      <h2 id="banner-titulo">Bem-vindo à Arte Madeira do China</h2>
+      <p id="banner-descricao">Especialistas em MDF e móveis planejados.</p>
     </section>
 
     <section class="destaques">
-      <h3> Máquinas modernas e equipamentos de primeira qualidade.</h3>
-    
+      <h3 id="destaques-titulo">Máquinas modernas e equipamentos de primeira qualidade.</h3>
+
       <div class="carrossel-wrapper">
         <button class="botao-carrossel prev" onclick="mudarSlide(-1)">❮</button>
-        
         <div class="carrossel" id="carrossel">
           <div class="slide">
             <img src="./assets/img/painel-maquina-canaleta.jpg" alt="Painel da Máquina CNC">
-            <p class="legenda">Painel de Controle CNC</p>
+            <p class="legenda" id="legenda1">Painel de Controle CNC</p>
           </div>
           <div class="slide">
             <img src="./assets/img/maquina-canaletar.jpg" alt="Máquina de Canaleta CNC">
-            <p class="legenda">Máquina Canaletadora CNC</p>
+            <p class="legenda" id="legenda2">Máquina Canaletadora CNC</p>
           </div>
           <div class="slide">
             <img src="./assets/img/Seccionadora-Vertical-Compacta.webp" alt="Seccionadora Vertical Compacta">
-            <p class="legenda">Seccionadora Vertical Compacta</p>
+            <p class="legenda" id="legenda3">Seccionadora Vertical Compacta</p>
           </div>
         </div>
-    
         <button class="botao-carrossel next" onclick="mudarSlide(1)">❯</button>
       </div>
-    
+
       <div class="sobre-empresa">
-        <h4>Sobre a Arte Madeira do China</h4>
-        <p>Somos uma empresa especializada em MDF e móveis planejados, prezando sempre pela qualidade, inovação e compromisso com nossos clientes.</p>
-    
-        <h5>Missão</h5>
-        <p>Entregar soluções sob medida com excelência em acabamento e agilidade na entrega.</p>
-    
-        <h5>Valores</h5>
+        <h4 id="sobre-titulo">Sobre a Arte Madeira do China</h4>
+        <p id="sobre-texto">Somos uma empresa especializada em MDF e móveis planejados, prezando sempre pela qualidade, inovação e compromisso com nossos clientes.</p>
+
+        <h5 id="missao-titulo">Missão</h5>
+        <p id="missao-texto">Entregar soluções sob medida com excelência em acabamento e agilidade na entrega.</p>
+
+        <h5 id="valores-titulo">Valores</h5>
         <ul>
-          <li><i class="fas fa-handshake"></i> Comprometimento</li>
-          <li><i class="fas fa-eye"></i> Transparência</li>
-          <li><i class="fas fa-star"></i> Qualidade no atendimento</li>
-          <li><i class="fas fa-lightbulb"></i> Inovação constante</li>
+          <li><i class="fas fa-handshake"></i> <span id="valor1">Comprometimento</span></li>
+          <li><i class="fas fa-eye"></i> <span id="valor2">Transparência</span></li>
+          <li><i class="fas fa-star"></i> <span id="valor3">Qualidade no atendimento</span></li>
+          <li><i class="fas fa-lightbulb"></i> <span id="valor4">Inovação constante</span></li>
         </ul>
       </div>
     </section>
 
-                  <!-- Ícone fixo do carrinho -->
-              <div class="carrinho-icon" onclick="abrirCarrinho()">
-                🛒 <span id="contador-carrinho">0</span>
-              </div>
+    <!-- Ícone fixo do carrinho -->
+    <div class="carrinho-icon" onclick="abrirCarrinho()">
+      🛒 <span id="contador-carrinho">0</span>
+    </div>
 
-              <!-- Modal do carrinho -->
-              <div id="modal-carrinho" class="modal-carrinho">
-                <div class="modal-conteudo">
-                  <span class="fechar" onclick="fecharCarrinho()">&times;</span>
-                  <h2>Seu Carrinho</h2>
-                  <div id="itens-carrinho"></div>
-                  <p><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
-                  <button onclick="finalizarCompra()">Finalizar Compra via WhatsApp</button>
-                </div>
-              </div>
+    <!-- Modal do carrinho -->
+    <div id="modal-carrinho" class="modal-carrinho">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharCarrinho()">&times;</span>
+        <h2 id="titulo-carrinho">Seu Carrinho</h2>
+        <div id="itens-carrinho"></div>
+        <p><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
+        <button onclick="finalizarCompra()" id="botao-finalizar">Finalizar Compra via WhatsApp</button>
+      </div>
+    </div>
+  </main>
 
-    
   <footer>
-    <p>Contato: artemadeiradong@gmail.com | Instagram: em breve</p>
+    <p id="rodape-contato">Contato: artemadeiradong@gmail.com</p>
   </footer>
 
   <script src="/frontend/assets/js/api.js"></script>
   <script src="/frontend/assets/js/main.js"></script>
-  <script src="/frontend/assets/js/i18n.js"></script>
   <script src="/frontend/assets/js/carrosel.js"></script>
-  <script src="./assets/js/carrinho.js"></script>
-
-
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-  
+  <script src="/frontend/assets/js/carrinho.js"></script>
+  <script src="/frontend/assets/js/i18n.js"></script>
 </body>
 </html>

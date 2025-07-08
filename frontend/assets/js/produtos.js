@@ -43,13 +43,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const tipoSelecionado = card.querySelector(`input[name="tipo-chapa-${index}"]:checked`).value;
         const medidas = campoMedidas.value.trim();
 
-        const itemCarrinho = {
-          nome: produto.nome,
-          preco: produto.preco,
-          tipo: tipoSelecionado,
-          medidas: tipoSelecionado === 'cortada' ? medidas : '',
-          quantidade: 1
-        };
+        const medida = tipoSelecionado === 'cortada' ? medidas : '';
+        adicionarAoCarrinho(produto, medida, tipoSelecionado);
+        
+        
 
         adicionarAoCarrinho(itemCarrinho); // função que você implementará em carrinho.js
       });
