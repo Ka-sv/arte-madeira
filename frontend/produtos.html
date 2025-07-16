@@ -38,16 +38,27 @@
                 <p id="descricao-catalogo">Veja as opções de padrões e acabamentos da nova linha Eucatex.</p>
                 <a href="https://www.eucatex.com.br/origens-nativas/img/Catalogo-Digital-Colecao-Origens-MDF-2024.pdf" target="_blank" class="btn-catalogo" id="btn-ver-catalogo">📖 Visualizar Catálogo</a>
 
-              
             </div>
+
+            <div class="catalogo-card">
+              <img src="./assets/img/capa-sudati-ed8-page-001.jpg" alt="Catálogo Sudati" class="catalogo-capa">
+              <div class="catalogo-info">
+                <h3 id="titulo-catalogo-sudati">Catálogo MDF Sudati - Edição 8</h3>
+                <p id="descricao-catalogo-sudati">Confira os lançamentos e padrões da linha Sudati 2024.</p>
+                <a href="./assets/img/catalogo-sudati-ed8.pdf" target="_blank" class="btn-catalogo" id="btn-ver-catalogo-sudati">
+                  📖 Visualizar Catálogo
+                </a>
+                
+              </div>
+            </div>
+            
           </section>
-  
-      <!-- Ícone fixo do carrinho -->
+
             <div class="carrinho-icon" onclick="abrirCarrinho()">
               🛒 <span id="contador-carrinho">0</span>
             </div>
 
-            <!-- Modal do carrinho -->
+        
             <div id="modal-carrinho" class="modal-carrinho">
               <div class="modal-conteudo">
                 <span class="fechar" onclick="fecharCarrinho()">&times;</span>
@@ -56,14 +67,60 @@
                 <p><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
                 <button onclick="finalizarCompra()" id="botao-finalizar">Finalizar Compra via WhatsApp</button>
               </div>
+            </div>
 
-              <footer>
-                <p id="rodape-contato">Contato: artemadeiradong@gmail.com</p>
-              </footer>
+
+                 
+                <div class="botoes-contato-fixos" id="botoes-contato">
+                  <a href="https://wa.me/5511965779827" target="_blank" id="botao-whatsapp">
+                    <img src="./assets/img/whatsapp.png" alt="Fale no WhatsApp">
+                  </a>
+                  <a href="https://weixin.qq.com/" target="_blank" id="botao-wechat">
+                    <img src="./assets/img/wechat.png" alt="Fale no WeChat">
+                  </a>
+                </div>
+
+
+
+                <footer>
+                  <div class="footer-container">
+                    <!-- Logo -->
+                    <div class="footer-logo footer-section">
+                      <img src="./assets/img/logo.png" alt="Logo da Empresa">
+                    </div>
+                
+                    <!-- Navegação -->
+                    <div class="footer-section">
+                      <h4>Navegação</h4>
+                      <a href="#servicos">Serviços</a>
+                      <a href="#produtos">Produtos</a>
+                      <a href="#contato">Contato</a>
+                    </div>
+                
+                   
+                    <div class="footer-section">
+                      <h4>Contato</h4>
+                      <p>WhatsApp: (11) 91234-5678</p>
+                      <p>Email: contato@empresa.com</p>
+                      <div class="footer-social">
+                        <a href="https://www.instagram.com/suaempresa" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+                        </a>
+                        <a href="https://wa.me/5511965779827" target="_blank">
+                          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                
+                 <footer>
+    
 
   <script src="./assets/js/produtos.js" defer></script>
   <script src="./assets/js/carrinho.js"></script>
   <script src="./assets/js/i18n.js"></script>
+  <script src="./assets/js/botoes-contato.js" defer></script>
+
 
 
 </body>
