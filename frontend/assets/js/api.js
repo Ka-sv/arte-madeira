@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/produtos';  // ajuste conforme backend
+const API_URL = 'https://arte-madeira.onrender.com/produtos.html';  // ajuste conforme backend
 
 async function obterProdutos() {
   const resposta = await fetch(API_URL);
