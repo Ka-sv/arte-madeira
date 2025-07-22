@@ -2,8 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require('path');
-
 
 const rotaProduto = require('./routes/rotaProduto');
 const rotaPedido = require('./routes/rotaPedido');
@@ -15,22 +13,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Rotas
+// Rotas da API
 app.use('/api/produtos', rotaProduto);
 app.use('/api/pedidos', rotaPedido);
 app.use('/api/orcamentos', rotaOrcamento);
-console.log('MONGO_URI:', process.env.MONGO_URI);
 
-// Conexão com MongoDB
-  mongoose.connect(process.env.MONGO_URI)
+// Conexão com MongoDB e inicialização do servidor
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ Conectado ao MongoDB');
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(`🚀 Servidor rodando na porta ${process.env.PORT || 3000}`);
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Servidor rodando na porta ${PORT}`);
     });
   })
   .catch((err) => {
     console.error('❌ Erro ao conectar no MongoDB:', err);
   });
-
-app.use(express.static(path.join(__dirname, '../frontend')));
