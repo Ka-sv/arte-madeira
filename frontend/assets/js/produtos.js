@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const container = document.getElementById('produtos-container');
 
   try {
-    const resposta = await fetch('http://localhost:3000/api/produtos');
+    const resposta = await fetch('https://arte-madeira.onrender.com/api/produtos');
     const produtos = await resposta.json();
 
     produtos.forEach((produto, index) => {
