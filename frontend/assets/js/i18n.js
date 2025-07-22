@@ -34,6 +34,11 @@ const traducoes = {
     "descricao-catalogo": "Veja as opções de padrões e acabamentos da nova linha Eucatex.",
     "btn-ver-catalogo": "📖 Visualizar Catálogo",
 
+    "titulo-catalogo-sudati": "Catálogo MDF Sudati - Edição 8",
+    "descricao-catalogo-sudati": "Confira os lançamentos e padrões da linha Sudati 2024.",
+    "btn-ver-catalogo-sudati": "📖 Visualizar Catálogo",
+
+
     // contato.html
     "titulo-fale": "Fale Conosco",
     "label-nome": "Nome:",
@@ -78,6 +83,10 @@ const traducoes = {
     "titulo-catalogo-eucatex": "2025 年 Eucatex 原木系列",
     "descricao-catalogo": "查看 Eucatex 新系列的图案和饰面选项。",
     "btn-ver-catalogo": "📖 查看目录",
+    "titulo-catalogo-sudati": "Sudati MDF 目录 - 第 8 版",
+    "descricao-catalogo-sudati": "查看 Sudati 2024 年系列的新品和图案。",
+    "btn-ver-catalogo-sudati": "📖 查看目录",
+
 
     // contato.html
     "titulo-fale": "联系我们",
@@ -102,6 +111,8 @@ function trocarIdioma(idioma) {
   localStorage.setItem("idiomaSelecionado", idioma);
 }
 
+
+
 window.addEventListener("DOMContentLoaded", () => {
   let idioma = localStorage.getItem("idiomaSelecionado");
 
@@ -111,7 +122,12 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   const seletor = document.getElementById("lang");
-  if (seletor) seletor.value = idioma;
+  if (seletor) {
+    seletor.value = idioma;
+    seletor.addEventListener("change", (e) => {
+      trocarIdioma(e.target.value);
+    });
+  }
 
   trocarIdioma(idioma);
 });
