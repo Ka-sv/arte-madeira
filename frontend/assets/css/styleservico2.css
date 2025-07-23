@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  .servico {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .servico img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .servico .conteudo {
+    flex: 1;
+  }
+  
+  .servicos .servico {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .servicos .servico h3 {
+    margin-top: 0;
+  }
+  
+  .galeria {
+    padding: 40px 20px;
+    background-color: #fafafa;
+  }
+  
+  .galeria {
+    padding: 40px 20px;
+    background-color: #fafafa;
+  }
+  
+  .galeria h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+    font-size: 2rem;
+  }
+  
+  .galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .galeria-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .galeria-item img,
+  .galeria-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .galeria-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #222;
+  }
+  
+  .galeria-item p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  @media (max-width: 600px) {
+    .galeria h2 {
+      font-size: 1.5rem;
+    }
+    .servico {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .servico img {
+        width: 100%;
+      }
+  
+    .galeria-item h3 {
+      font-size: 1rem;
+    }
+  
+    .galeria-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
