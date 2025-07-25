@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arte Madeira do China</title>
   <link rel="stylesheet" href="./assets/css/styleservico2.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header>
-    <h1>Arte Madeira do China</h1>
-    <p>Excelência em móveis planejados e ambientes personalizados</p>
+    <img src="./assets/img/logo.png" alt="Logo Arte Madeira do China" class="logo">
+    <h1 id="titulo-site">Arte Madeira do China</h1>
+
+    <nav>
+      <a href="index.html" id="nav-inicio">Início</a>
+      <a href="produtos.html" id="nav-produtos">Produtos</a>
+      <a href="contato.html" id="nav-contato">Contato</a>
+      <a href="servicos2.html" id="nav-contato">Contato</a>
+      
+
+      <select id="lang" onchange="trocarIdioma(this.value)">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="zh">🇨🇳 中文</option>
+      </select>
+    </nav>
   </header>
 
   <main>
@@ -17,7 +31,7 @@
       <h2>Nossos Serviços</h2>
   
       <div class="servico">
-        <img src="img/moveis-planejados.jpg" alt="Móveis planejados">
+        <img src="./assets/img/fotoCiluminacao.png" alt="Móveis planejados">
         <div class="conteudo">
           <h3>Móveis Planejados</h3>
           <p>Projetamos móveis sob medida para residências, lojas e ambientes corporativos.</p>
@@ -25,37 +39,23 @@
       </div>
   
       <div class="servico">
-        <img src="img/design-ambientes.jpg" alt="Design de ambientes">
+        <img src="./assets/img/cozinha.jpg" alt="Design de ambientes">
         <div class="conteudo">
           <h3>Design de Ambientes</h3>
           <p>Equipe especializada para transformar seu espaço com criatividade e funcionalidade.</p>
         </div>
       </div>
   
+     
       <div class="servico">
-        <img src="img/fabricacao-propria.jpg" alt="Fabricação própria">
-        <div class="conteudo">
-          <h3>Fabricação Própria</h3>
-          <p>Controle total de qualidade e prazos com fabricação própria e equipe técnica experiente.</p>
-        </div>
-      </div>
-  
-      <div class="servico">
-        <img src="img/materiais.jpg" alt="Materiais de qualidade">
+        <img src="./assets/img/estoque.png" alt="Materiais de qualidade">
         <div class="conteudo">
           <h3>Escolha do Material</h3>
           <p>Você escolhe o material, cor e acabamento. Trabalhamos com MDF, madeira maciça, entre outros.</p>
         </div>
       </div>
   
-      <div class="servico">
-        <img src="img/eletrica-iluminacao.jpg" alt="Parte elétrica e iluminação">
-        <div class="conteudo">
-          <h3>Parte Elétrica e Iluminação</h3>
-          <p>Planejamos e instalamos toda a parte elétrica e iluminação decorativa dos ambientes.</p>
-        </div>
-      </div>
-    </section>
+    
   
     <section class="galeria">
       <h2>Projetos Realizados</h2>
@@ -95,8 +95,22 @@
   </main>
   
 
-  <footer>
-    <p>&copy; 2025 Arte Madeira do China - Todos os direitos reservados</p>
-  </footer>
+  <div class="footer-section">
+    <h4>Contato</h4>
+    <p>WhatsApp: (11) 91234-5678</p>
+    <p>Email: ✉️ artemadeiradong@gmail.com</p>
+    <div class="footer-social">
+      <a href="https://wa.me/5511965779827" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  © 2025 Arte Madeira. Todos os direitos reservados.
+</div>
+</footer>
+
 </body>
 </html>
