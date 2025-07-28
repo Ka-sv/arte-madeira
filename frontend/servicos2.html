@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arte Madeira do China</title>
-  <link rel="stylesheet" href="./assets/css/styleservico2.css">
+  <!-- <link rel="stylesheet" href="./assets/css/styleservico2.css"> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
       <a href="index.html" id="nav-inicio">Início</a>
       <a href="produtos.html" id="nav-produtos">Produtos</a>
       <a href="contato.html" id="nav-contato">Contato</a>
-      <a href="servicos2.html" id="nav-contato">Contato</a>
+      <a href="servicos2.html" id="nav-servicos">Serviços</a>
       
 
       <select id="lang" onchange="trocarIdioma(this.value)">
@@ -26,7 +26,8 @@
     </nav>
   </header>
 
-  <main>
+  <main class="servicos-main">
+    <!-- Serviços -->
     <section class="servicos">
       <h2>Nossos Serviços</h2>
   
@@ -46,7 +47,6 @@
         </div>
       </div>
   
-     
       <div class="servico">
         <img src="./assets/img/estoque.png" alt="Materiais de qualidade">
         <div class="conteudo">
@@ -54,63 +54,90 @@
           <p>Você escolhe o material, cor e acabamento. Trabalhamos com MDF, madeira maciça, entre outros.</p>
         </div>
       </div>
+
+      <div class="servico">
+        <img src="./assets/img/camera.jpg" alt="Instalações e acabamentos">
+        <div class="conteudo">
+          <h3>Instalação Elétrica e Segurança</h3>
+          <p>Equipe própria para instalação de iluminação, tomadas e câmeras. Soluções práticas e seguras com acabamento profissional.</p>
+        </div>
+      </div>
+      
+    </section>
   
-    
-  
+    <!-- Galeria -->
     <section class="galeria">
       <h2>Projetos Realizados</h2>
-  
       <div class="galeria-container">
         <div class="galeria-item">
-          <img src="./assets/img/lojaUsodeVidro.jpg" alt="Cozinha planejada moderna">
+          <img src="./assets/img/fotoCiluminacao.png" alt="Cozinha planejada moderna">
           <h3>Loja Comercial</h3>
-          <p>Projeto sob medida com iluminação e acabamento em MDF de alto padrão vidros personalizados adequado.</p>
+          <p>Loja planejada com MDF branco brilhante e painéis canaletados com detalhe vermelho, ideal para exibir
+             produtos com organização. Iluminação moderna e acabamento sofisticado que valorizam o ambiente.</p>
         </div>
   
         <div class="galeria-item">
-            <img src="./assets/img/loja-branco-neve.jpg" alt="Loja planejada">
+          <img src="./assets/img/loja-branco-neve.jpg" alt="Loja planejada">
           <h3>Loja Comercial</h3>
           <p>Layout funcional e elegante com móveis personalizados para exibição de produtos.</p>
         </div>
-  
-        <!-- <div class="galeria-item">
-          <video controls>
-            <source src="videos/projeto1.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
-          </video>
-          <h3>Tour de Obra Finalizada</h3>
-          <p>Veja os detalhes de um projeto completo de loja com iluminação decorativa.</p>
-        </div>
-  
+
         <div class="galeria-item">
-          <video controls>
-            <source src="videos/projeto2.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
-          </video>
-          <h3>Ambiente Corporativo</h3>
-          <p>Montagem de móveis planejados para escritório com infraestrutura elétrica inclusa.</p>
-        </div> -->
+          <img src="./assets/img/xlojaMarrom.png" alt="Loja planejada">
+          <h3>Loja Comercial</h3>
+          <p>Loja com ripado de madeira, LED embutido e bancada branca. Sofisticação e funcionalidade em um só ambiente.</p>
+        </div>
+
       </div>
     </section>
   </main>
+
+
+  <div class="botoes-contato-fixos" id="botoes-contato">
+    <a href="https://wa.me/5511965779827" target="_blank" id="botao-whatsapp">
+      <img src="./assets/img/whatsapp.png" alt="Fale no WhatsApp">
+    </a>
+    <a href="https://weixin.qq.com/" target="_blank" id="botao-wechat">
+      <img src="./assets/img/wechat.png" alt="Fale no WeChat">
+    </a>
+  </div>
+  
   
 
-  <div class="footer-section">
-    <h4>Contato</h4>
-    <p>WhatsApp: (11) 91234-5678</p>
-    <p>Email: ✉️ artemadeiradong@gmail.com</p>
-    <div class="footer-social">
-      <a href="https://wa.me/5511965779827" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-      </a>
+  <footer>
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-logo footer-section">
+        <img src="./assets/img/logo.png" alt="Logo da Empresa">
+      </div>
+  
+      <!-- Navegação -->
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="servicos2.html">Serviços</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+  
+     
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p>WhatsApp: (11) 91234-5678</p>
+        <p>Email: ✉️ artemadeiradong@gmail.com</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5511965779827" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="footer-bottom">
-  © 2025 Arte Madeira. Todos os direitos reservados.
-</div>
-</footer>
-
+  
+    <div class="footer-bottom">
+      © 2025 Arte Madeira. Todos os direitos reservados.
+    </div>
+  </footer>
+        
+  <script src="./assets/js/botoes-contato.js" defer></script>
+  <script src="/frontend/assets/js/i18n.js"></script>
 </body>
 </html>
