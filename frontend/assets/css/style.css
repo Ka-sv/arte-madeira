@@ -939,3 +939,18 @@ footer {
 }
 
 
+.footer-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.footer-logo img {
+  margin: 0 auto;
+}
+
