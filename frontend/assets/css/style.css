@@ -869,7 +869,7 @@ footer {
 .servico .conteudo h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: #f4a261;
+  color: #ffffff;
 }
 
 .servico .conteudo p {
@@ -892,7 +892,7 @@ footer {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #f4a261;
+  color: #fdfdfde7;
 }
 
 .galeria-container {
@@ -928,7 +928,7 @@ footer {
 
 .galeria-item h3 {
   font-size: 1.2rem;
-  color: #f4a261;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
