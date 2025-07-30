@@ -22,7 +22,16 @@ document.addEventListener('DOMContentLoaded', async () => {
           <label>
             <input type="radio" name="tipo-chapa-${index}" value="cortada"> Cortada
           </label>
-          <input type="text" class="medidas" placeholder="Informe as medidas" style="display: none;">
+          
+          <div class="medidas-container" style="display: none;">
+            <div class="medida-linha">
+              <input type="number" class="input-comp" placeholder="Comprimento (mm)">
+              <input type="number" class="input-larg" placeholder="Largura (mm)">
+              <input type="number" class="input-qtd" placeholder="Qtd">
+            </div>
+              <button type="button" class="add-medida">+ Adicionar Medida</button>
+            </div>
+
         </div>
 
         <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
@@ -30,25 +39,55 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Evento: mostra/esconde campo de medidas ao trocar opção
       const radios = card.querySelectorAll(`input[name="tipo-chapa-${index}"]`);
-      const campoMedidas = card.querySelector('.medidas');
+      const medidasContainer = card.querySelector('.medidas-container');
+      const botaoAddMedida = card.querySelector('.add-medida');
+
       radios.forEach(radio => {
         radio.addEventListener('change', () => {
-          campoMedidas.style.display = radio.value === 'cortada' ? 'block' : 'none';
+          medidasContainer.style.display = radio.value === 'cortada' ? 'block' : 'none';
         });
       });
 
+      botaoAddMedida.addEventListener('click', () => {
+        const novaLinha = document.createElement('div');
+        novaLinha.className = 'medida-linha';
+        novaLinha.innerHTML = `
+          <input type="number" class="input-comp" placeholder="Comprimento (mm)">
+          <input type="number" class="input-larg" placeholder="Largura (mm)">
+          <input type="number" class="input-qtd" placeholder="Qtd">
+          <button type="button" class="remover-medida" title="Remover medida">🗑️</button>
+        `;
+        medidasContainer.insertBefore(novaLinha, botaoAddMedida);
+      
+        // Ativa o botão de remover
+        const botaoRemover = novaLinha.querySelector('.remover-medida');
+        botaoRemover.addEventListener('click', () => {
+          novaLinha.remove();
+        });
+      });
+      
       // Evento: botão adicionar ao carrinho
       const botao = card.querySelector('.btn-add-carrinho');
       botao.addEventListener('click', () => {
         const tipoSelecionado = card.querySelector(`input[name="tipo-chapa-${index}"]:checked`).value;
-        const medidas = campoMedidas.value.trim();
-
-        const medida = tipoSelecionado === 'cortada' ? medidas : '';
-        adicionarAoCarrinho(produto, medida, tipoSelecionado);
         
-        
+        let medidas = [];
+          if (tipoSelecionado === 'cortada') {
+            const linhas = card.querySelectorAll('.medida-linha');
+            linhas.forEach(linha => {
+              const comp = linha.querySelector('.input-comp')?.value;
+              const larg = linha.querySelector('.input-larg')?.value;
+              const qtd = linha.querySelector('.input-qtd')?.value;
+              if (comp && larg && qtd) {
+                medidas.push(`${comp}x${larg} = ${qtd}`);
+              }
+            });
+          }
 
-        adicionarAoCarrinho(itemCarrinho); // função que você implementará em carrinho.js
+        
+          adicionarAoCarrinho(produto, medidas.join(', '), tipoSelecionado);
+
+
       });
 
       container.appendChild(card);

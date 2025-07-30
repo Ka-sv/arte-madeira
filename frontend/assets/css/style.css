@@ -689,6 +689,18 @@ nav a:hover {
   .galeria-item p {
     font-size: 0.9rem;
   }
+  .medida-linha {
+    flex-direction: column;
+  }
+
+  .medida-linha input {
+    width: 100%;
+  }
+
+  .add-medida {
+    width: 100%;
+    font-size: 0.95rem;
+  }
 }
 
 .catalogo-capa {
@@ -700,13 +712,10 @@ nav a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px; /* Tamanho máximo desejado em desktops */
+  width: 250px; 
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 600px) {
-  
-}
+
 
 
 select#lang {
@@ -815,12 +824,7 @@ footer {
   color: #aaa;
 }
 
-@media (max-width: 768px) {
-  
-}
 
-
-/* Estilo melhorado da seção de serviços */
 .servicos-main {
   padding: 40px 20px;
   background-color: #111;
@@ -878,9 +882,7 @@ footer {
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
- 
-}
+
 
 .galeria {
   padding: 60px 20px;
@@ -954,3 +956,67 @@ footer {
   margin: 0 auto;
 }
 
+.medida-linha {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.medida-linha input {
+  flex: 1 1 100px;
+  min-width: 100px;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #111;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.add-medida {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  color: #f0f0f0;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.add-medida:hover {
+  background: linear-gradient(145deg, #3a3a3a, #222);
+  color: #ffffff;
+  border-color: #00cba9;
+  box-shadow: 0 0 8px #00cba9aa;
+}
+
+.add-medida::before {
+  content: "+";
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00cba9;
+}
+
+.remover-medida {
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-left: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remover-medida:hover {
+  background: #cc0000;
+}

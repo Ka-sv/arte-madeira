@@ -38,10 +38,11 @@ function atualizarCarrinho() {
     const div = document.createElement('div');
     div.innerHTML = `
       <hr>
-      <p><strong>${item.nome}</strong> (${item.tipo}) ${item.medida ? `<br>Medida: ${item.medida}` : ''}
-        <br>Qtd: ${item.quantidade}
-        <br>Preço: R$ ${(item.preco * item.quantidade).toFixed(2)}
-      </p>
+      <p><strong>${item.nome}</strong> (${item.tipo})
+      ${item.medida ? `<br><strong>Medidas:</strong><br>${item.medida.replaceAll(',', '<br>')}` : ''}
+      <br>Qtd: ${item.quantidade}
+      <br>Preço: R$ ${(item.preco * item.quantidade).toFixed(2)}</p>
+
       <button onclick="alterarQuantidade(${index}, 1)">➕</button>
       <button onclick="alterarQuantidade(${index}, -1)">➖</button>
       <button onclick="removerItem(${index})">🗑️</button>
@@ -83,7 +84,10 @@ function finalizarCompra() {
   let mensagem = '*Pedido via site:*\n\n';
   carrinho.forEach(item => {
     mensagem += `• ${item.nome} (${item.tipo})`;
-    if (item.medida) mensagem += `\n  Medidas: ${item.medida}`;
+    if (item.medida) {
+      const medidasFormatadas = item.medida.split(',').map(m => `    - ${m.trim()}`).join('\n');
+      mensagem += `\n  Medidas:\n${medidasFormatadas}`;
+    }
     mensagem += `\n  Qtd: ${item.quantidade}`;
     mensagem += `\n  Subtotal: R$ ${(item.preco * item.quantidade).toFixed(2)}\n\n`;
   });
