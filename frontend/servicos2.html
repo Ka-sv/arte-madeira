@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arte Madeira do China</title>
-  <!-- <link rel="stylesheet" href="./assets/css/styleservico2.css"> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -16,8 +15,7 @@
       <a href="index.html" id="nav-inicio">Início</a>
       <a href="produtos.html" id="nav-produtos">Produtos</a>
       <a href="contato.html" id="nav-contato">Contato</a>
-      <a href="servicos2.html" id="nav-servicos">Serviços</a>
-      
+      <a href="servicos2.html" id="nav-servico">Serviços</a>
 
       <select id="lang" onchange="trocarIdioma(this.value)">
         <option value="pt">🇧🇷 Português</option>
@@ -29,37 +27,37 @@
   <main class="servicos-main">
     <!-- Serviços -->
     <section class="servicos">
-      <h2>Nossos Serviços</h2>
+      <h2 id="servicos-titulo">Nossos Serviços</h2>
   
       <div class="servico">
         <img src="./assets/img/fotoCiluminacao.png" alt="Móveis planejados">
         <div class="conteudo">
-          <h3>Móveis Planejados</h3>
-          <p>Projetamos móveis sob medida para residências, lojas e ambientes corporativos.</p>
+          <h3 id="serv-moveis-titulo">Móveis Planejados</h3>
+          <p id="serv-moveis-desc">Projetamos móveis sob medida para residências, lojas e ambientes corporativos.</p>
         </div>
       </div>
   
       <div class="servico">
         <img src="./assets/img/cozinha.jpg" alt="Design de ambientes">
         <div class="conteudo">
-          <h3>Design de Ambientes</h3>
-          <p>Equipe especializada para transformar seu espaço com criatividade e funcionalidade.</p>
+          <h3 id="serv-design-titulo">Design de Ambientes</h3>
+          <p id="serv-design-desc">Equipe especializada para transformar seu espaço com criatividade e funcionalidade.</p>
         </div>
       </div>
   
       <div class="servico">
         <img src="./assets/img/estoque.png" alt="Materiais de qualidade">
         <div class="conteudo">
-          <h3>Escolha do Material</h3>
-          <p>Você escolhe o material, cor e acabamento. Trabalhamos com MDF, madeira maciça, entre outros.</p>
+          <h3 id="serv-material-titulo">Escolha do Material</h3>
+          <p id="serv-material-desc">Você escolhe o material, cor e acabamento. Trabalhamos com MDF, madeira maciça, entre outros.</p>
         </div>
       </div>
 
       <div class="servico">
         <img src="./assets/img/camera.jpg" alt="Instalações e acabamentos">
         <div class="conteudo">
-          <h3>Instalação Elétrica e Segurança</h3>
-          <p>Equipe própria para instalação de iluminação, tomadas e câmeras. Soluções práticas e seguras com acabamento profissional.</p>
+          <h3 id="serv-eletrica-titulo">Instalação Elétrica e Segurança</h3>
+          <p id="serv-eletrica-desc">Equipe própria para instalação de iluminação, tomadas e câmeras. Soluções práticas e seguras com acabamento profissional.</p>
         </div>
       </div>
       
@@ -67,31 +65,29 @@
   
     <!-- Galeria -->
     <section class="galeria">
-      <h2>Projetos Realizados</h2>
+      <h2 id="galeria-titulo">Projetos Realizados</h2>
       <div class="galeria-container">
         <div class="galeria-item">
           <img src="./assets/img/fotoCiluminacao.png" alt="Cozinha planejada moderna">
-          <h3>Loja Comercial</h3>
-          <p>Loja planejada com MDF branco brilhante e painéis canaletados com detalhe vermelho, ideal para exibir
-             produtos com organização. Iluminação moderna e acabamento sofisticado que valorizam o ambiente.</p>
+          <h3 id="galeria1-titulo">Loja Comercial</h3>
+          <p id="galeria1-desc">Loja planejada com MDF branco brilhante e painéis canaletados com detalhe vermelho, ideal para exibir produtos com organização. Iluminação moderna e acabamento sofisticado que valorizam o ambiente.</p>
         </div>
   
         <div class="galeria-item">
           <img src="./assets/img/loja-branco-neve.jpg" alt="Loja planejada">
-          <h3>Loja Comercial</h3>
-          <p>Layout funcional e elegante com móveis personalizados para exibição de produtos.</p>
+          <h3 id="galeria2-titulo">Loja Comercial</h3>
+          <p id="galeria2-desc">Layout funcional e elegante com móveis personalizados para exibição de produtos.</p>
         </div>
 
         <div class="galeria-item">
           <img src="./assets/img/xlojaMarrom.png" alt="Loja planejada">
-          <h3>Loja Comercial</h3>
-          <p>Loja com ripado de madeira, LED embutido e bancada branca. Sofisticação e funcionalidade em um só ambiente.</p>
+          <h3 id="galeria3-titulo">Loja Comercial</h3>
+          <p id="galeria3-desc">Loja com ripado de madeira, LED embutido e bancada branca. Sofisticação e funcionalidade em um só ambiente.</p>
         </div>
 
       </div>
     </section>
   </main>
-
 
   <div class="botoes-contato-fixos" id="botoes-contato">
     <a href="https://wa.me/5511965779827" target="_blank" id="botao-whatsapp">
@@ -101,8 +97,6 @@
       <img src="./assets/img/wechat.png" alt="Fale no WeChat">
     </a>
   </div>
-  
-  
 
   <footer>
     <div class="footer-container">
@@ -110,7 +104,7 @@
       <div class="footer-logo footer-section">
         <img src="./assets/img/logo.png" alt="Logo da Empresa">
       </div>
-  
+
       <!-- Navegação -->
       <div class="footer-section">
         <h4>Navegação</h4>
@@ -118,8 +112,7 @@
         <a href="produtos.html">Produtos</a>
         <a href="contato.html">Contato</a>
       </div>
-  
-     
+
       <div class="footer-section">
         <h4>Contato</h4>
         <p>WhatsApp: (11) 91234-5678</p>
@@ -131,12 +124,12 @@
         </div>
       </div>
     </div>
-  
+
     <div class="footer-bottom">
       © 2025 Arte Madeira. Todos os direitos reservados.
     </div>
   </footer>
-        
+
   <script src="./assets/js/botoes-contato.js" defer></script>
   <script src="/frontend/assets/js/i18n.js"></script>
 </body>
